@@ -69,7 +69,7 @@ function Signin() {
     <Container>
       <FormCard>
         <CardHeader title="Sign in" />
-        {isError && <Alert severity="error">{JSON.stringify(error)}</Alert>}
+        {isError && <Alert severity="error">{(error as Error).message}</Alert>}
         <CardContent>
           <form role="form" onSubmit={handleSubmit(onSubmit)}>
             <Box sx={{ mb: 3 }}>
